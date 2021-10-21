@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personas [
+    <!ELEMENT personas (persona+)>
+    <!ELEMENT persona (nombre, nacimiento?, direccion, (hombre | mujer))>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT nacimiento EMPTY>
+    <!ELEMENT direccion (calle, poblacion, provincia, cpostal)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT poblacion (#PCDATA)>
+    <!ELEMENT provincia (#PCDATA)>
+    <!ELEMENT cpostal (#PCDATA)>
+    <!ELEMENT hombre EMPTY>
+    <!ELEMENT mujer EMPTY>
+
+    <!ATTLIST nacimiento dia CDATA #IMPLIED>
+    <!ATTLIST nacimiento mes CDATA #IMPLIED>
+    <!ATTLIST nacimiento anyo CDATA #IMPLIED>
+]>
+
+<personas>
+    <persona>
+        <nombre>Juan Pardo</nombre>
+        <nacimiento dia="10" mes="Abril" anyo="1982"/>
+        <direccion>
+            <calle>Caoba,1</calle>
+            <poblacion>Madrid</poblacion>
+            <provincia>Madrid</provincia>
+            <cpostal>28005</cpostal>
+        </direccion>
+        <hombre/>
+    </persona>
+    <persona>
+        <nombre>María Pérez</nombre>
+        <nacimiento dia="23" mes="07" anyo="2000"/>
+        <direccion>
+            <calle>Buenos Aires,10</calle>
+            <poblacion>Guadix</poblacion>
+            <provincia>Granada</provincia>
+            <cpostal>18500</cpostal>
+        </direccion>
+        <mujer/>
+    </persona>
+</personas>
