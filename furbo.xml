@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipos_de_futbol[
+<!ELEMENT equipos_de_futbol (equipo+)>
+<!ELEMENT equipo (nombre, ciudad, entrenador, jugadores)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT entrenador (#PCDATA)>
+<!ELEMENT jugadores (jugador+)>
+<!ELEMENT jugador (posicion, nombre, nacionalidad)>
+<!ELEMENT posicion (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+]>
+
+<equipos_de_futbol>
+   <equipo>
+      <nombre>Paris Saint Germain</nombre>
+      <ciudad>Paris</ciudad>
+      <entrenador></entrenador>
+      <jugadores>
+         <jugador>
+            <posicion>Portero</posicion>
+            <nombre>Donnaruma</nombre>
+            <nacionalidad>italiano</nacionalidad>
+         </jugador>
+         <jugador>
+            <posicion>Delantero</posicion>
+            <nombre>Neymar Jr.</nombre>
+            <nacionalidad>brasileño</nacionalidad>
+         </jugador>
+      </jugadores>
+   </equipo>
+   <equipo>
+      <nombre>Stade Rennais F.C.</nombre>
+      <ciudad>Rennais</ciudad>
+      <entrenador></entrenador>
+      <jugadores>
+         <jugador>
+            <posicion>Portero</posicion>
+            <nombre>Alfred Gomis</nombre>
+            <nacionalidad>senegalés</nacionalidad>
+         </jugador>
+         <jugador>
+            <posicion>Delantero</posicion>
+            <nombre>Gaëtan Laborde</nombre>
+            <nacionalidad>francés</nacionalidad>
+         </jugador>
+      </jugadores>
+   </equipo>
+</equipos_de_futbol>
