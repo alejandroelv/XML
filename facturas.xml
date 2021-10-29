@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE facturas [
+    <!ELEMENT facturas (factura+)>
+    <!ELEMENT factura (datos_cliente, datos_factura)>
+    <!ELEMENT datos_cliente (nombre, primer_apellido, segundo_apellido, DNI, telefono)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT primer_apellido (#PCDATA)>
+    <!ELEMENT segundo_apellido (#PCDATA)>
+    <!ELEMENT DNI (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT datos_factura (resguardo, alquiler, compras)>
+    <!ELEMENT resguardo EMPTY>
+    <!ELEMENT alquiler (fecha_devolucion, pelicula+)>
+    <!ELEMENT fecha_devolucion (#PCDATA)>
+    <!ELEMENT pelicula (titulo, genero, duracion, reparto, caratula?)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT genero (#PCDATA)>
+    <!ELEMENT duracion (#PCDATA)>
+    <!ELEMENT reparto (actor+)>
+    <!ELEMENT actor (nombre, apellido)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT caratula (#PCDATA)>
+    <!ELEMENT compras (DVD, cintas_video)>
+    <!ELEMENT DVD (titulo, fecha_salida, extras?)>
+    <!ELEMENT fecha_salida (#PCDATA)>
+    <!ELEMENT extras (#PCDATA)>
+    <!ELEMENT cintas_video (titulo, fecha_salida, formato, rebobinada?)>
+    <!ELEMENT formato (#PCDATA)>
+    <!ELEMENT rebobinada EMPTY>
+
+    <!ATTLIST datos_cliente identificador ID #REQUIRED>
+    <!ATTLIST resguardo forma_pago CDATA (efectivo | tarjeta) "efectivo">
+    <!ATTLIST resguardo importe NMSTOKENS #REQUIRED>
+    <!ATTLIST pelicula idPelicula ID #REQUIRED>
+    <!ATTLIST pelicula valoracion CDATA #REQUIRED>
+]>
+
+<facturas>
+    <factura>
+        <datos_cliente identificador="273W">
+            <nombre>Wesley</nombre>
+            <primer_apellido>Earl</primer_apellido>
+            <segundo_apellido>Craven</segundo_apellido>
+            <DNI></DNI>
+            <telefono>666616981</telefono>
+        </datos_cliente>
+        <datos_factura>
+            <resguardo forma_pago="tarjeta" importe="60€"/>
+            <alquiler>
+                <fecha_devolucion></fecha_devolucion>
+                <pelicula idPelicula="542" valoracion="7.3/10">
+                    <titulo>Scream</titulo>
+                    <genero>Terror/Slasher</genero>
+                    <duracion>111 minutos</duracion>
+                    <reparto>
+                        <actor>
+                            <nombre>David</nombre>
+                            <apellido>Arquette</apellido>
+                        </actor>
+                        <actor>
+                            <nombre>Neve</nombre>
+                            <apellido>Campbell</apellido>
+                        </actor>
+                        <actor>
+                            <nombre>Courtney</nombre>
+                            <apellido>Cox</apellido>
+                        </actor>
+                    </reparto>
+                </pelicula>
+                <pelicula idPelicula="568" valoracion="7.7/10">
+                    <titulo>Pesadilla en Elm Street</titulo>
+                    <genero>Terror/Slasher</genero>
+                    <duracion>91 minutos</duracion>
+                    <reparto>
+                        <actor>
+                            <nombre>John</nombre>
+                            <apellido>Saxon</apellido>
+                        </actor>
+                        <actor>
+                            <nombre>Ronee</nombre>
+                            <apellido>Blakley</apellido>
+                        </actor>
+                        <actor>
+                            <nombre>Johnny</nombre>
+                            <apellido>Deep</apellido>
+                        </actor>
+                    </reparto>
+                    <caratula></caratula>
+                </pelicula>
+            </alquiler>
+            <compras>
+                <DVD>
+                    <titulo>Las colinas tienen ojos</titulo>
+                    <fecha_salida>22/07/1977</fecha_salida>
+                    <extras/>
+                </DVD>
+                <cintas_video>
+                    <titulo>La última casa a la izquierda</titulo>
+                    <fecha_salida>30/08/1972</fecha_salida>
+                    <formato>VHS</formato>
+                    <rebobinada/>
+                </cintas_video>
+            </compras>
+        </datos_factura>
+    </factura>
+</facturas>
