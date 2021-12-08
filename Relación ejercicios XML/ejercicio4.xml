@@ -1,0 +1,30 @@
+<pedido fechaPedido="2021-11-29" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio4.xsd">
+    <direccionEnvio>
+        <nombre>Alejandro Elvira Cervera</nombre>
+        <calle>Calle Falsa 123</calle>
+        <localidad>Granada</localidad>
+        <provincia>Granada</provincia>
+        <cp>18010</cp>
+    </direccionEnvio>
+    <direccionFiscal>
+        <nombre>Alejandro Elvira Cervera</nombre>
+        <calle>Calle Falsa 123</calle>
+        <localidad>Granada</localidad>
+        <provincia>Granada</provincia>
+        <cp>18010</cp>
+    </direccionFiscal>
+    <articulos>
+        <articulo codigo="123-AB">
+            <nombreProducto>Ratón Gaming Sharkoon Drakonia</nombreProducto>
+            <cantidad>1</cantidad>
+            <precio>32.98</precio>
+            <fechaEnvio>2021-12-02</fechaEnvio>
+        </articulo>
+        <articulo codigo="789-YZ">
+            <nombreProducto>Corsair Vengeance LPX DDR4 3200MHz PC4-25600 8GB CL16</nombreProducto>
+            <cantidad>2</cantidad>
+            <precio>74.34</precio>
+            <fechaEnvio>2021-12-02</fechaEnvio>
+        </articulo>
+    </articulos>
+</pedido>

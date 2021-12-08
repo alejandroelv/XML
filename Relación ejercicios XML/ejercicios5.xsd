@@ -1,0 +1,139 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="museos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="museo" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombre" type="xs:string"/>
+                        <xs:element name="dia_inauguracion" type="xs:date"/>
+                        <xs:element name="direccion">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="calle">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:maxLength value="100"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="localidad" type="tipoCiudad"/>
+                                    <xs:element name="codigo_postal">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="[0-9]{5}"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="provincia" type="tipoCiudad" minOccurs="0"/>
+                                    <xs:element name="pais">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="España"/>
+                                                <xs:enumeration value="Italia"/>
+                                                <xs:enumeration value="Francia"/>
+                                                <xs:enumeration value="Estados Unidos"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="horario">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="dia" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="nombre"  type="tipoDia"/>
+                                                <xs:element name="hora_apertura" type="tipoTiempo"/>
+                                                <xs:element name="hora_cierre" type="tipoTiempo" minOccurs="0"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="fecha_inicio_semana" type="xs:date"/>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="calendario">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="evento" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="nombre" type="xs:string"/>
+                                                <xs:element name="fecha_inicio" type="xs:date"/>
+                                                <xs:element name="fecha_finalizacion" type="xs:date" minOccurs="0"/>
+                                                <xs:element name="descripcion">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:maxLength value="300"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                            <xs:attribute name="tipo_evento">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="exposicion"/>
+                                                        <xs:enumeration value="curso"/>
+                                                        <xs:enumeration value="visita"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="año">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:integer">
+                                            <xs:totalDigits value="4"/>
+                                            <xs:minInclusive value="1700"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="url" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                    <xs:attribute name="codigo_museo" type="tipoID"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="tipoCiudad">
+    <xs:restriction base="xs:string">
+        <xs:maxLength value="30"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoID">
+    <xs:restriction base="xs:ID">
+        <xs:pattern value="[A-Z][A-Z][0-9]{3}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoDia">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="Lunes"/>
+        <xs:enumeration value="Martes"/>
+        <xs:enumeration value="Miércoles"/>
+        <xs:enumeration value="Jueves"/>
+        <xs:enumeration value="Viernes"/>
+        <xs:enumeration value="Sábado"/>
+        <xs:enumeration value="Domingo"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoTiempo">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-1][0-9]:[0-5][0-9]"/>
+        <xs:pattern value="2[0-3]:[0-5][0-9]"/>
+        <xs:pattern value="Cerrado"/>
+    </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

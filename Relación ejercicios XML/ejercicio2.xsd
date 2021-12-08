@@ -1,0 +1,91 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="alumno">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="apellidos" type="xs:string"/>
+            <xs:element name="repite" minOccurs="0">
+                <xs:complexType></xs:complexType>
+            </xs:element>
+            <xs:element name="plan">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="asignaturas">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="asignatura" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="nombre" type="xs:string"/>
+                                                <xs:element name="abreviatura">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:pattern value="[A-Z]{3,4}"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="matricula" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="fecha" type="tipoFecha"/>
+                                                            <xs:element name="tipo">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                        <xs:enumeration value="Ordinaria"/>
+                                                                        <xs:enumeration value="Extraordinaria"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                            <xs:attribute name="cod" type="xs:string"/>
+                                        </xs:complexType>
+                                        <xs:unique name="unique-isbn">
+                                            <xs:selector xpath="asignatura"/>
+                                            <xs:field xpath="@cod"/>
+                                         </xs:unique>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="curso">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:integer">
+                                            <xs:enumeration value="1"/>
+                                            <xs:enumeration value="2"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="numero" type="tipoIDalumno"/>
+    </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="tipoNombre">
+    <xs:restriction base="xs:string">
+        <xs:pattern value=""/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoIDalumno">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]{3}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoFecha">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-2][1-9]/0[1-9]/20[0-9][0-9]"/>
+        <xs:pattern value="3[0-1]/0[1-9]/20[0-9][0-9]"/>
+        <xs:pattern value="[0-2][1-9]/1[0-2]/20[0-9][0-9]"/>
+        <xs:pattern value="3[0-1]/1[0-2]/20[0-9][0-9]"/>
+    </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

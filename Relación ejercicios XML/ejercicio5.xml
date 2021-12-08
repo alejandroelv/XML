@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<museos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicios5.xsd">
+    <museo codigo_museo="ES001">
+        <nombre>Museo Nacional del Prado</nombre>
+        <dia_inauguracion>1819-11-19</dia_inauguracion>
+        <direccion>
+            <calle>C. de Ruiz de Alarcón, 23</calle>
+            <localidad>Madrid</localidad>
+            <codigo_postal>28014</codigo_postal>
+            <provincia>Madrid</provincia>
+            <pais>España</pais>
+        </direccion>
+        <horario fecha_inicio_semana="2021-12-06">
+            <dia>
+                <nombre>Lunes</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>20:00</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Martes</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>20:00</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Miércoles</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>20:00</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Jueves</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>20:00</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Viernes</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>20:00</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Sábado</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>20:00</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Domingo</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>19:00</hora_cierre>
+            </dia>
+        </horario>
+        <calendario año="2021">
+            <evento tipo_evento="exposicion">
+                <nombre>Tornaviaje</nombre>
+                <fecha_inicio>2021-10-05</fecha_inicio>
+                <fecha_finalizacion>2022-02-13</fecha_finalizacion>
+                <descripcion>Arte iberoamericano en España</descripcion>
+            </evento>
+            <evento tipo_evento="exposicion">
+                <nombre>Leonardo y la copia de Mona Lisa</nombre>
+                <fecha_inicio>2021-09-28</fecha_inicio>
+                <fecha_finalizacion>2022-01-23</fecha_finalizacion>
+                <descripcion>Nuevos planteamientos sobre la práctica del taller vinciano</descripcion>
+            </evento>
+            <evento tipo_evento="exposicion">
+                <nombre>Cuarenta años de amistad</nombre>
+                <fecha_inicio>2021-09-14</fecha_inicio>
+                <fecha_finalizacion>2022-01-16</fecha_finalizacion>
+                <descripcion>Donaciones de la Fundación Amigos del Museo del Prado</descripcion>
+            </evento>
+            <evento tipo_evento="exposicion">
+                <nombre>El Hijo pródigo de Murillo</nombre>
+                <fecha_inicio>2021-09-21</fecha_inicio>
+                <fecha_finalizacion>2022-01-23</fecha_finalizacion>
+                <descripcion>El arte de narrar en el Barroco andaluz</descripcion>
+            </evento>
+            <evento tipo_evento="curso">
+                <nombre>La Historia del Arte. Curso Completo</nombre>
+                <fecha_inicio>2021-09-06</fecha_inicio>
+                <fecha_finalizacion>2022-06-06</fecha_finalizacion>
+                <descripcion>Nuevos planteamientos sobre la práctica del taller vinciano</descripcion>
+            </evento>
+        </calendario>
+        <url>https://www.museodelprado.es/</url>
+    </museo>
+    <museo codigo_museo="US002">
+        <nombre>Museo Nacional del Aire y el Espacio de Estados Unidos</nombre>
+        <dia_inauguracion>1976-07-01</dia_inauguracion>
+        <direccion>
+            <calle>600 Independence Ave SW</calle>
+            <localidad>Washington D.C.</localidad>
+            <codigo_postal>20560</codigo_postal>
+            <pais>Estados Unidos</pais>
+        </direccion>
+        <horario fecha_inicio_semana="2021-12-06">
+            <dia>
+                <nombre>Lunes</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>17:30</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Martes</nombre>
+                <hora_apertura>Cerrado</hora_apertura>
+            </dia>
+            <dia>
+                <nombre>Miércoles</nombre>
+                <hora_apertura>Cerrado</hora_apertura>
+            </dia>
+            <dia>
+                <nombre>Jueves</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>17:30</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Viernes</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>17:30</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Sábado</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>17:30</hora_cierre>
+            </dia>
+            <dia>
+                <nombre>Domingo</nombre>
+                <hora_apertura>10:00</hora_apertura>
+                <hora_cierre>17:30</hora_cierre>
+            </dia>
+        </horario>
+        <calendario año="2021">
+            <evento tipo_evento="exposicion">
+                <nombre>Cómo las cosas vuelan</nombre>
+                <fecha_inicio>2021-10-05</fecha_inicio>
+                <descripcion>Explicación de los principios básicos que permiten a las aeronaves volar.</descripcion>
+            </evento>
+            <evento tipo_evento="exposicion">
+                <nombre>El traje espacial de Neil Armstrong</nombre>
+                <fecha_inicio>2021-09-28</fecha_inicio>
+                <fecha_finalizacion>2022-01-23</fecha_finalizacion>
+                <descripcion>El traje de Neil Armstrong vuelve a estar disponible al público por primera vez en 13 años</descripcion>
+            </evento>
+            <evento tipo_evento="visita">
+                <nombre>El vuelo alrededor de la Luna del Artemis I</nombre>
+                <fecha_inicio>2021-12-09</fecha_inicio>
+                <fecha_finalizacion>2021-12-09</fecha_finalizacion>
+                <descripcion>Unete a una charla online sobre la próxima misión del Artemis I.</descripcion>
+            </evento>
+            <evento tipo_evento="visita">
+                <nombre>El pasado y el futuro de hacer ciencia</nombre>
+                <fecha_inicio>2021-12-09</fecha_inicio>
+                <fecha_finalizacion>2021-12-09</fecha_finalizacion>
+                <descripcion>Un evento academico para los miembros de la comunidad histórica espacial.</descripcion>
+            </evento>
+            <evento tipo_evento="visita">
+                <nombre>Aire y espacio: Encontrando nuestras alas</nombre>
+                <fecha_inicio>2021-12-10</fecha_inicio>
+                <fecha_finalizacion>2021-12-11</fecha_finalizacion>
+                <descripcion>Una interesante visita sobre aquellas personas que desafiaron a lo convencional y ayudaron en el progreso de la aeronautica.</descripcion>
+            </evento>
+        </calendario>
+        <url>https://airandspace.si.edu/</url>
+    </museo>
+</museos>

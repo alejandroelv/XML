@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumno numero="323" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio2.xsd">
+    <nombre>Juan</nombre>
+    <apellidos>Rodríguez Marín</apellidos>
+    <repite/>
+    <plan>
+        <asignaturas curso="1">
+            <asignatura cod="123">
+                <nombre>Lenguajes de Marcas y Sistemas de Información</nombre>
+                <abreviatura>LMSI</abreviatura>
+                <matricula>
+                    <fecha>23/10/2015</fecha>
+                    <tipo>Ordinaria</tipo>
+                </matricula>
+            </asignatura>
+            <asignatura cod="123">
+                <nombre>Sistemas de Gestión Empresarial</nombre>
+                <abreviatura>SGE</abreviatura>
+            </asignatura>
+        </asignaturas>
+    </plan>
+</alumno>

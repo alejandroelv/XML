@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html [
+    <!ELEMENT html (section+)>
+    <!ELEMENT section (headline,ul)>
+    <!ELEMENT headline (#PCDATA)>
+    <!ELEMENT ul (li+)>
+    <!ELEMENT li (#PCDATA)>
+
+    <!ATTLIST headline size CDATA #REQUIRED>
+]>
+
+<html>
+    <section>
+        <headline size="2">Ejemplo de XML</headline>
+        <ul>
+            <li> datos estructurados </li>
+            <li> intercambio de datos </li>
+        </ul>
+    </section>
+    <section>
+        <headline size="3">Otro ejemplo</headline>
+        <ul>
+            <li> datos opcionales </li>
+            <li> esquemas opcionales </li>
+            <li> un solo elemento raíz </li>
+        </ul>
+    </section>
+</html>
