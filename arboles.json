@@ -1,0 +1,49 @@
+{
+    "arboles":[
+        {
+             "nombre_cientifico": "Acer monspessulanum",
+             "nombre_comun": "Arce de Montpellier,Arce menor",
+             "vegetacion": "Caducifolio",
+             "altura": "De 6 a 10 metros",
+             "forma": "Copa esférica. Tronco principal recto con bifurcaciones. Ramaje colgante",
+             "color_primavera":"Haz verde brillante, envés verde blanquecino",
+             "resistencia_frio":"Heladas fuertes(hasta -15ºC)"
+            
+        },
+        {
+            "nombre_cientifico": "Olea europaea",
+            "nombre_comun": "Olivo",
+            "vegetacion": "Perenne",
+            "altura": "De 8 a 15 metros",
+            "forma": "Copa irregular. Tronco principal irregular con bifurcaciones"
+            
+        },
+        {
+            "nombre_comun": "Ramaje tortuoso",
+            "color_primavera":"Haz verde oscuro, envés verde plateado",
+            "resistencia_frio":"Heladas medias (hasta -10ºC)"
+            
+        },
+        {
+            "nombre_cientifico": "Platanus orientalis",
+            "nombre_comun": "Plátano",
+            "vegetacion": "Caducifolio",
+            "altura": "De 20 a 25 metros",
+            "forma": "Copa ovoidal. Tronco pripical recto. Ramaje expandido",
+            "color_primavera": "Haz verde medio, envés verde claro",
+            "color_otoño": "Ocre",
+            "resistencia_frio":"Heladas fuertes (hasta -20ºC)"
+            
+        },
+        {
+            "nombre_cientifico": "Quercus ilex",
+            "nombre_comun": "Encina",
+            "vegetacion": "Perenne",
+            "forma": "Copa esférica o elíptica irregular. Tronco pripical recto. Ramaje tortuoso",
+            "color_primavera":"Plateado en hojas jóvenes. En hojas antiguas, haz verde oscuro, envés plateado.",
+            "resistencia_frio":"Heladas fuertes (hasta -15ºC)"
+            
+        }
+    ]
+    
+}

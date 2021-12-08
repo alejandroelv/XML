@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facturas>
+    <factura numero="999" fecha="12-01-2005" pedido="731" forma_pago="efectivo">
+        <vendedor nombre="Equipos Digitales S.L." CIF="Q-9876543">
+            <direccion>Av. Valladolid Madrid 28015</direccion>
+            <telefono>917776688</telefono>
+            <fax>917776699</fax>
+        </vendedor>
+        <cliente numero="879" nombre="Darío Bueno Gutiérrez">
+            <direccion>Av. Oporto nº7 4ºD</direccion>
+            <poblacion>Madrid</poblacion>
+            <postal>28043</postal>
+            <provincia>Madrid</provincia>
+        </cliente>
+        <pedido>
+            <articulo referencia="MII93000F/8">
+                <descripcion>Micro PENTIUM IV 3000Mhz FB800</descripcion>
+                <cantidad>1</cantidad>
+                <precio>230€</precio>
+                <IVA>16,00</IVA>
+                <importe>266,80€</importe>
+            </articulo>
+            <articulo referencia="MB8QDIF4">
+                <descripcion>Placa base QDI P4</descripcion>
+                <cantidad>1</cantidad>
+                <precio>180€</precio>
+                <IVA>16,00</IVA>
+                <importe>208,80€</importe>
+            </articulo>
+            <articulo referencia="MEDD512M32">
+                <descripcion>DIMM DDR 512MB 3200</descripcion>
+                <cantidad>2</cantidad>
+                <precio>40€</precio>
+                <IVA>16,00</IVA>
+                <importe>92,80€</importe>
+            </articulo>
+            <articulo referencia="HD250GSA7">
+                <descripcion>Disco duro 250GB SATA 7200</descripcion>
+                <cantidad>4</cantidad>
+                <precio>120€</precio>
+                <IVA>16,00</IVA>
+                <importe>556,80€</importe>
+            </articulo>
+        </pedido>
+        <importe>
+            <base_imponible>970€</base_imponible>
+            <IVA>16%</IVA>
+            <cuota_IVA>155,20</cuota_IVA>
+            <total>1125,20€</total>
+        </importe>
+    </factura>
+</facturas>

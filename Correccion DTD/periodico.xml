@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE NEWSPAPER [
+
+<!ELEMENT NEWSPAPER (ARTICLE+)>
+<!ELEMENT ARTICLE (HEADLINE,BYLINE,LEAD,BODY,NOTES)>
+<!ELEMENT HEADLINE (#PCDATA)>
+<!ELEMENT BYLINE (#PCDATA)>
+<!ELEMENT LEAD (#PCDATA)>
+<!ELEMENT BODY (#PCDATA)>
+<!ELEMENT NOTES (#PCDATA)>
+
+<!ATTLIST ARTICLE AUTHOR CDATA #REQUIRED>
+<!ATTLIST ARTICLE EDITOR CDATA #IMPLIED>
+<!ATTLIST ARTICLE DATE CDATA #IMPLIED>
+<!ATTLIST ARTICLE EDITION CDATA #IMPLIED>
+
+<!ENTITY NEWSPAPER "Vervet Logic Times">
+<!ENTITY PUBLISHER "Vervet Logic Press">
+<!ENTITY COPYRIGHT "Copyright 1998 Vervet Logic Press">
+
+]>
+
+<NEWSPAPER>
+    <ARTICLE AUTHOR="S.Quílez" EDITOR="&NEWSPAPER;" DATE="14/10/2021" EDITION="Mañana">
+        <HEADLINE>Erupción en La Palma, hoy</HEADLINE>
+        <BYLINE>La Palma registra más de medio centenar de terremotos durante la madrugada, uno de 4,5</BYLINE>
+        <LEAD>La erupción del volcán de la Cumbre Vieja en la isla de La Palma entra en su vigesimosexta jornada sin que los datos que analizan los investigadores, sobre todo las emisiones de dióxido de azufre y la sismicidad en la zona, permitan augurar su conclusión a corto o medio plazo.</LEAD>
+        <BODY>Solo durante la pasada madrugada se han registrado más de medio centenar de terremotos, uno de ellos de magnitud 4,5, localizado en Villa de Mazo a las 1:27 hora canaria a una gran profundidad, de 37 kilómetros, según ha informado el Instituto Geográfico Nacional. </BODY>
+        <NOTES></NOTES>
+    </ARTICLE>
+    <ARTICLE AUTHOR="Samuel A. Pilar" EDITOR="&NEWSPAPER;" DATE="14/10/2021" EDITION="Mañana">
+        <HEADLINE>Los expertos avalan la administración simultánea de la tercera dosis COVID y la vacuna contra la gripe</HEADLINE>
+        <BYLINE>Las personas mayores de 70 años recibirán ambas vacunas al mismo tiempo a partir del 25 de octubre</BYLINE>
+        <LEAD>Las personas mayores de 70 años comenzarán a recibir la tercera dosis de la vacuna contra la COVID-19 y la de la gripe a partir del próximo 25 de octubre, tal y como ha decidido la Comisión de Salud Pública.</LEAD>
+        <BODY> La administración de las dos vacunas se realizará de manera conjunta, para optimizar los recursos sanitarios disponibles y facilitar la accesibilidad a las personas que se tienen que vacunar, y en base a la existencia de informes que avalan este procedimiento, siempre que se inoculen "en lugares anatómicos distintos".</BODY>
+        <NOTES>"El año pasado no hubo gripe, pero el comportamiento de la gripe este año sigue siendo una incógnita. Por lo tanto, ante la duda, hay que vacunarse", asegura García Rojas, quien opina que, "en términos generales, se minusvalora a esta enfermedad, pero tiene un impacto muy importante en relación a la salud de determinadas personas, especialmente las que tienen patologías de base y una edad avanzada".</NOTES>
+    </ARTICLE>
+</NEWSPAPER>

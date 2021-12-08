@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com">
+    <xs:element name="DNI">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name ="nombre">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:string">
+                            <xs:minLength value ="3"/>
+                            <xs:maxLength value ="10"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="apellidos">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:string">
+                            
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="sexo">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:string">
+                            <xs:enumeration value ="M"/>
+                            <xs:enumeration value ="H"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="nacionalidad">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:string">
+                            <xs:pattern value="[A-Z][A-Z][A-Z]"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="fecha_nacimiento">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:date">
+                            <xs:minInclusive value ="1900-01-01"/>
+                            <xs:maxInclusive value ="2015-01-01"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="numero_soporte" type ="xs:integer"></xs:element>
+                <xs:element name ="fecha_validez">
+                    <xs:simpleType>
+                        <xs:restriction base ="date">
+                            <xs:minInclusive value ="2021-01-01"/>
+                            <xs:maxInclusive value ="2099-01-01"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name ="equipo_expedicion" type ="xs:string"></xs:element>
+                <xs:element name ="domicilio">
+                    <xs:complexType>
+                        <xs:element name ="calle" type ="xs:string"></xs:element>
+                        <xs:element name ="localidad" type ="xs:string"></xs:element>
+                        <xs:element name ="ciudad" type ="xs:string"></xs:element>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name ="lugar_nacimiento">
+                    <xs:complexType>
+                        <xs:element name ="localidad" type ="xs:string"></xs:element>
+                        <xs:element name ="ciudad" type ="xs:string"></xs:element>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name ="padres">
+                    <xs:complexType>
+                        <xs:element name ="padre" type ="xs:string"></xs:element>
+                        <xs:element name ="madre" type ="xs:string"></xs:element>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<DNI>
+    <nombre>Alejandro</nombre>
+    <apellidos>Elvira Cervera</apellidos>
+    <sexo>M</sexo>
+    <nacionalidad>ESP</nacionalidad>
+    <fecha_nacimiento>2000-07-23</fecha_nacimiento>
+    <numero_soporte>BNV190141</numero_soporte>
+    <fecha_validez>2026-02-05</fecha_validez>
+    <equipo_expedicion>18433A6D1</equipo_expedicion>
+    <domicilio>
+        <calle>Avda. Bahia de Almería 16 P04 B</calle>
+        <localidad>Roquetas de Mar</localidad>
+        <provincia>Almería</provincia>
+    </domicilio>
+    <lugar_nacimiento>
+        <localidad>Alfacar</localidad>
+        <provincia>Granada</provincia>
+    </lugar_nacimiento>
+    <padres>
+        <padre>Antonio Francisco</padre>
+        <madre>María Anunciata</madre>
+    </padres>
+</DNI>
