@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tarjeta_embarque [
+    <!ELEMENT tarjeta_embarque (aeropuerto, pasajero, vuelo)>
+    <!ELEMENT aeropuerto (nombre,impuesto)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT impuesto (#PCDATA)>
+    <!ELEMENT pasajero (apellido1,apellido2,nombre,direccion)>
+    <!ELEMENT apellido1 (#PCDATA)>
+    <!ELEMENT apellido2 (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT vuelo (numero_asiento, origen, destino)>
+    <!ELEMENT numero_asiento (#PCDATA)>
+    <!ELEMENT origen (#PCDATA)>
+    <!ELEMENT destino (#PCDATA)>
+
+    <!ATTLIST aeropuerto codigo_aeropuerto CDATA ID #REQUIRED>
+    <!ATTLIST pasajero pasaporte CDATA ID #REQUIRED>
+    <!ATTLIST pasajero tarjeta_credito NMTOKENS #REQUIRED>
+    <!ATTLIST vuelo codigo_vuelo CDATA ID #REQUIRED>
+]>
+
+<tarjeta_embarque>
+    <aeropuerto codigo_aeropuerto="XYZ">
+        <nombre>Aeropuerto de Málaga</nombre>
+        <impuesto>2.45</impuesto>
+    </aeropuerto>
+    <pasajero pasaporte="X12345678J" tarjeta_credito="12345678912345">
+        <apellido1>Elvira</apellido1>
+        <apellido2>Cervera</apellido2>
+        <nombre>Alejandro</nombre>
+        <direccion>Calle Falsa 123</direccion>
+    </pasajero>
+    <vuelo codigo_vuelo="IB1234">
+        <numero_asiento>34</numero_asiento>
+        <origen>Praga</origen>
+        <destino>Madrid</destino>
+    </vuelo>
+</tarjeta_embarque>
