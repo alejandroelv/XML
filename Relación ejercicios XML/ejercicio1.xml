@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tarjeta_embarque [
-    <!ELEMENT tarjeta_embarque (aeropuerto, pasajero, vuelo)>
-    <!ELEMENT aeropuerto (nombre,impuesto)>
-    <!ELEMENT nombre (#PCDATA)>
-    <!ELEMENT impuesto (#PCDATA)>
-    <!ELEMENT pasajero (apellido1,apellido2,nombre,direccion)>
-    <!ELEMENT apellido1 (#PCDATA)>
-    <!ELEMENT apellido2 (#PCDATA)>
-    <!ELEMENT direccion (#PCDATA)>
-    <!ELEMENT vuelo (numero_asiento, origen, destino)>
-    <!ELEMENT numero_asiento (#PCDATA)>
-    <!ELEMENT origen (#PCDATA)>
-    <!ELEMENT destino (#PCDATA)>
 
-    <!ATTLIST aeropuerto codigo_aeropuerto CDATA ID #REQUIRED>
-    <!ATTLIST pasajero pasaporte CDATA ID #REQUIRED>
-    <!ATTLIST pasajero tarjeta_credito NMTOKENS #REQUIRED>
-    <!ATTLIST vuelo codigo_vuelo CDATA ID #REQUIRED>
-]>
-
-<tarjeta_embarque>
+<tarjeta_embarque xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio1.xsd">
     <aeropuerto codigo_aeropuerto="XYZ">
         <nombre>Aeropuerto de Málaga</nombre>
         <impuesto>2.45</impuesto>

@@ -27,33 +27,21 @@
                                         </xs:simpleType>
                                     </xs:element>
                                     <xs:element name="provincia" type="tipoCiudad" minOccurs="0"/>
-                                    <xs:element name="pais">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:string">
-                                                <xs:enumeration value="España"/>
-                                                <xs:enumeration value="Italia"/>
-                                                <xs:enumeration value="Francia"/>
-                                                <xs:enumeration value="Estados Unidos"/>
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:element>
+                                    <xs:element name="pais" type="tipoPais"/>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
                         <xs:element name="horario">
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="dia" maxOccurs="unbounded">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="nombre"  type="tipoDia"/>
-                                                <xs:element name="hora_apertura" type="tipoTiempo"/>
-                                                <xs:element name="hora_cierre" type="tipoTiempo" minOccurs="0"/>
-                                            </xs:sequence>
-                                        </xs:complexType>
-                                    </xs:element>
+                                    <xs:element name="lunes" type="tipoDia"/>
+                                    <xs:element name="martes" type="tipoDia"/>
+                                    <xs:element name="miercoles" type="tipoDia"/>
+                                    <xs:element name="jueves" type="tipoDia"/>
+                                    <xs:element name="viernes" type="tipoDia"/>
+                                    <xs:element name="sabado" type="tipoDia"/>
+                                    <xs:element name="domingo" type="tipoDia"/>
                                 </xs:sequence>
-                                <xs:attribute name="fecha_inicio_semana" type="xs:date"/>
                             </xs:complexType>
                         </xs:element>
                         <xs:element name="calendario">
@@ -88,7 +76,6 @@
                                 <xs:attribute name="año">
                                     <xs:simpleType>
                                         <xs:restriction base="xs:integer">
-                                            <xs:totalDigits value="4"/>
                                             <xs:minInclusive value="1700"/>
                                         </xs:restriction>
                                     </xs:simpleType>
@@ -110,23 +97,27 @@
     </xs:restriction>
 </xs:simpleType>
 
+<xs:simpleType name="tipoPais">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="España"/>
+        <xs:enumeration value="Italia"/>
+        <xs:enumeration value="Francia"/>
+        <xs:enumeration value="Estados Unidos"/>
+    </xs:restriction>
+</xs:simpleType>
+
 <xs:simpleType name="tipoID">
     <xs:restriction base="xs:ID">
         <xs:pattern value="[A-Z][A-Z][0-9]{3}"/>
     </xs:restriction>
 </xs:simpleType>
 
-<xs:simpleType name="tipoDia">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="Lunes"/>
-        <xs:enumeration value="Martes"/>
-        <xs:enumeration value="Miércoles"/>
-        <xs:enumeration value="Jueves"/>
-        <xs:enumeration value="Viernes"/>
-        <xs:enumeration value="Sábado"/>
-        <xs:enumeration value="Domingo"/>
-    </xs:restriction>
-</xs:simpleType>
+<xs:complexType name="tipoDia">
+    <xs:sequence>
+        <xs:element name="hora_apertura" type="tipoTiempo"/>
+        <xs:element name="hora_cierre" type="tipoTiempo" minOccurs="0"/>
+    </xs:sequence>
+</xs:complexType>
 
 <xs:simpleType name="tipoTiempo">
     <xs:restriction base="xs:string">

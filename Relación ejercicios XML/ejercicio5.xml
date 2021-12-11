@@ -10,42 +10,35 @@
             <provincia>Madrid</provincia>
             <pais>España</pais>
         </direccion>
-        <horario fecha_inicio_semana="2021-12-06">
-            <dia>
-                <nombre>Lunes</nombre>
+        <horario>
+            <lunes>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>20:00</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Martes</nombre>
+            </lunes>
+            <martes>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>20:00</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Miércoles</nombre>
+            </martes>
+            <miercoles>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>20:00</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Jueves</nombre>
+            </miercoles>
+            <jueves>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>20:00</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Viernes</nombre>
+            </jueves>
+            <viernes>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>20:00</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Sábado</nombre>
+            </viernes>
+            <sabado>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>20:00</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Domingo</nombre>
+            </sabado>
+            <domingo>
                 <hora_apertura>10:00</hora_apertura>
-                <hora_cierre>19:00</hora_cierre>
-            </dia>
+                <hora_cierre>20:00</hora_cierre>
+            </domingo>
         </horario>
         <calendario año="2021">
             <evento tipo_evento="exposicion">
@@ -90,40 +83,33 @@
             <codigo_postal>20560</codigo_postal>
             <pais>Estados Unidos</pais>
         </direccion>
-        <horario fecha_inicio_semana="2021-12-06">
-            <dia>
-                <nombre>Lunes</nombre>
+        <horario>
+            <lunes>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>17:30</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Martes</nombre>
+            </lunes>
+            <martes>
                 <hora_apertura>Cerrado</hora_apertura>
-            </dia>
-            <dia>
-                <nombre>Miércoles</nombre>
+            </martes>
+            <miercoles>
                 <hora_apertura>Cerrado</hora_apertura>
-            </dia>
-            <dia>
-                <nombre>Jueves</nombre>
+            </miercoles>
+            <jueves>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>17:30</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Viernes</nombre>
+            </jueves>
+            <viernes>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>17:30</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Sábado</nombre>
+            </viernes>
+            <sabado>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>17:30</hora_cierre>
-            </dia>
-            <dia>
-                <nombre>Domingo</nombre>
+            </sabado>
+            <domingo>
                 <hora_apertura>10:00</hora_apertura>
                 <hora_cierre>17:30</hora_cierre>
-            </dia>
+            </domingo>
         </horario>
         <calendario año="2021">
             <evento tipo_evento="exposicion">

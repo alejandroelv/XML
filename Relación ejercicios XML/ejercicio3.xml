@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html [
-    <!ELEMENT html (section+)>
-    <!ELEMENT section (headline,ul)>
-    <!ELEMENT headline (#PCDATA)>
-    <!ELEMENT ul (li+)>
-    <!ELEMENT li (#PCDATA)>
 
-    <!ATTLIST headline size CDATA #REQUIRED>
-]>
-
-<html>
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio3.xsd">
     <section>
         <headline size="2">Ejemplo de XML</headline>
         <ul>

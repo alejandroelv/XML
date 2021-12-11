@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<alumno numero="323" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio2.xsd">
+<!DOCTYPE alumno [
+    <!ELEMENT alumno (nombre, apellidos, repite?, plan)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT repite EMPTY>
+    <!ELEMENT plan (asignaturas)>
+    <!ELEMENT asignaturas (asignatura+)>
+    <!ELEMENT asignatura (nombre, abreviatura, matricula?)>
+    <!ELEMENT abreviatura (#PCDATA)>
+    <!ELEMENT matricula (fecha, tipo)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    
+    <!ATTLIST alumno numero ID NMTOKENS #REQUIRED>
+    <!ATTLIST asignaturas curso (1|2) #REQUIRED>
+    <!ATTLIST asignatura cod ID NMTOKENS #REQUIRED>
+]>
+<alumno numero="323">
     <nombre>Juan</nombre>
     <apellidos>Rodríguez Marín</apellidos>
     <repite/>
@@ -13,7 +30,7 @@
                     <tipo>Ordinaria</tipo>
                 </matricula>
             </asignatura>
-            <asignatura cod="123">
+            <asignatura cod="124">
                 <nombre>Sistemas de Gestión Empresarial</nombre>
                 <abreviatura>SGE</abreviatura>
             </asignatura>

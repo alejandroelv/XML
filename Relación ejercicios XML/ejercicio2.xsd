@@ -17,7 +17,7 @@
                                     <xs:element name="asignatura" maxOccurs="unbounded">
                                         <xs:complexType>
                                             <xs:sequence>
-                                                <xs:element name="nombre" type="xs:string"/>
+                                                <xs:element name="nombre" type="tipoNombre"/>
                                                 <xs:element name="abreviatura">
                                                     <xs:simpleType>
                                                         <xs:restriction base="xs:string">
@@ -41,12 +41,8 @@
                                                     </xs:complexType>
                                                 </xs:element>
                                             </xs:sequence>
-                                            <xs:attribute name="cod" type="xs:string"/>
+                                            <xs:attribute name="cod" type="tipoID"/>
                                         </xs:complexType>
-                                        <xs:unique name="unique-isbn">
-                                            <xs:selector xpath="asignatura"/>
-                                            <xs:field xpath="@cod"/>
-                                         </xs:unique>
                                     </xs:element>
                                 </xs:sequence>
                                 <xs:attribute name="curso">
@@ -58,22 +54,32 @@
                                     </xs:simpleType>
                                 </xs:attribute>
                             </xs:complexType>
+                            <xs:unique name="codigoAsignatura-unico">
+                                <xs:selector xpath="asignatura" /> 
+                                <xs:field xpath="@cod" /> 
+                            </xs:unique>
                         </xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="numero" type="tipoIDalumno"/>
+        <xs:attribute name="numero" type="tipoID"/>
     </xs:complexType>
+    <xs:unique name="codigoAlumno-unico">
+        <xs:selector xpath="alumno" /> 
+        <xs:field xpath="@numero" /> 
+    </xs:unique>
 </xs:element>
 
 <xs:simpleType name="tipoNombre">
     <xs:restriction base="xs:string">
-        <xs:pattern value=""/>
+        <xs:maxLength value="50"/>
+        <xs:whiteSpace value="collapse"/>
+        <xs:pattern value="[A-Z][\p{L}\-\s]+"/>
     </xs:restriction>
 </xs:simpleType>
 
-<xs:simpleType name="tipoIDalumno">
+<xs:simpleType name="tipoID">
     <xs:restriction base="xs:string">
         <xs:pattern value="[0-9]{3}"/>
     </xs:restriction>
